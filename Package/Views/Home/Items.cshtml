@@ -1,0 +1,21 @@
+@using Package.Models;
+@using System.Collections.Generic;
+
+
+<h1>Package Details</h1>
+<p>Here are your package details:</p>
+
+
+
+<ul>
+  @foreach (Item instance in Model)
+  {
+    <li>Length: @instance.Length</li>
+    <li>Width: @instance.Width</li>
+    <li>Height: @instance.Height</li>
+    <li>Weight: @instance.Weight</li>
+    <p>$ @instance.GetPrice() USD</p> 
+  }
+    @* @{Model.Clear();} *@
+</ul>
+
